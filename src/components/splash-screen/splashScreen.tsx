@@ -1,7 +1,11 @@
 import anime from "animejs/lib/anime.es.js";
 import { useEffect, useRef, useState } from "react";
 import LogoSVG from "../logo-svg/logo_svg";
+import Image from "next/image";
+import SVGLogo from "../../../assets/logo/React logo.svg";
+
 import "./splashScreen.scss";
+import { url } from "inspector";
 
 interface IFinishedLoading {
   finishedLoading: () => void;
@@ -40,6 +44,9 @@ const SplashScreen: React.FC<IFinishedLoading> = ({ finishedLoading }) => {
   return (
     <div className="flex h-screen items-center justify-center">
       <LogoSVG ref={svgRef} />
+      <div className="bg-black w-24 h-24 flex items-center justify-center">
+        <Image src={SVGLogo} alt="Logo" width={60} height={60} />
+      </div>
     </div>
   );
 };
