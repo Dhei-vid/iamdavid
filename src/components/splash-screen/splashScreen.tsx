@@ -39,14 +39,6 @@ const SplashScreen: React.FC<IFinishedLoading> = ({ finishedLoading }) => {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      {/* <Image
-        className="path"
-        id="logo"
-        src={img}
-        width={100}
-        height={100}
-        alt="Logo"
-      /> */}
       <LogoSVG ref={svgRef} />
     </div>
   );
